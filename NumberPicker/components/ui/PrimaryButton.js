@@ -2,11 +2,7 @@ import { View, Pressable, Text, StyleSheet } from "react-native"
 import Colors from '../../constants/colors'
 
 
-const PrimaryButton = ({text, onPress}) => {
-
-    // const pressHandler = () => {
-        
-    // }
+const PrimaryButton = ({children, onPress}) => {
 
     return (
         <View style={styles.containerOuter}>
@@ -17,7 +13,7 @@ const PrimaryButton = ({text, onPress}) => {
                     ? [styles.containerInner, styles.pressed] 
                     : styles.containerInner}
             >
-                <Text style={styles.buttonText}>{text}</Text>
+                <Text style={styles.buttonText}>{children}</Text>
             </Pressable>
         </View>
     )
@@ -25,9 +21,10 @@ const PrimaryButton = ({text, onPress}) => {
 
 const styles = StyleSheet.create({
     containerOuter: {
+        flex:1,
         borderRadius: 28, 
         margin: 4,
-        overflow: 'hidden'
+        overflow: 'hidden',
     }, 
     containerInner: {
         backgroundColor: Colors.primary3,
@@ -37,6 +34,7 @@ const styles = StyleSheet.create({
     buttonText:{
         textAlign: 'center',
         color: Colors.primary1,
+        fontSize: 20,
     },
     pressed:{
         opacity: 0.75,

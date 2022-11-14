@@ -14,13 +14,14 @@ const styles = StyleSheet.create({
 
     }, 
     title: {
-        fontWeight: 'bold', 
+        fontFamily: 'open-sans-bold', 
         fontSize: 24,
         color: Colors.primary1, 
         textAlign: "center", 
         borderWidth: 2,
         padding: 12,
         borderColor: Colors.primary1, 
+        maxWidth: '80%', 
       }
 })
 
